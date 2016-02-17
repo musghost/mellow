@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -23,9 +24,82 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div class="menu">
+      <div class="left-menu">
+        <div class="menu-padding">
+          <a href="#" id="close-menu">
+            <i class="icons i-close"></i>
+          </a>
+          <div class="mellow-logo">
+            <img src="images/logo-menu.png">
+          </div>
+          <div class="mellow-logo border-bottom">
+            <img src="images/mellow.png">
+          </div>
+          <p>Softened or matured by age<br>or experience. Relaxed<br>and good-humored.</p>
+        </div>
+        <div class="place-bottom">
+          <h4>STAY TUNED!</h4>
+          <div class="links">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+          <div class="contact-info-wrapper">
+            <span class="contact-info">
+              <span class="index">M /</span>
+              <a href="mailto:hola@mellow.cc">hola@mellow.cc</a>
+            </span>
+            <span class="contact-info">
+              <span class="index">T /</span>
+              +52 (55) 67.30.15.42
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="right-menu">
+        <div class="menu-padding">
+          <div class="text-right idiom">
+            <a href="#" class="active">ENG</a> /
+            <a href="#">SPA</a>
+          </div>
+        </div>
+        <div class="place-bottom">
+          <ul>
+            <li>
+              <a href="#secstructure">Structure</a>
+            </li>
+            <li>
+              <a href="#secservices">Services</a>
+            </li>
+            <li>
+              <a href="#secprojects">Portfolio</a>
+            </li>
+            <li>
+              <a href="#secteam">The team</a>
+            </li>
+            <li>
+              <a href="#seccontact">Contact</a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <span class="work">Work with us!</span>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <header>
-      <h2>Mellow Holding</h2>
+      <h2>
+        <span class="button-span" id="show-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span>| </span>
+        <span id="target">Mellow Holding</span>
+      </h2>
       <div class="logo">
         <a href="#">
           <img src="images/logo.png">
@@ -34,434 +108,461 @@
     </header>
 
     <div class="selector">
-      <ul>
-        <li><a href="#" class="first">&nbsp;</a></li>
-        <li><a href="#" class="second">&nbsp;</a></li>
-        <li><a href="#" class="third">&nbsp;</a></li>
-        <li><a href="#" class="fourth">&nbsp;</a></li>
-        <li><a href="#" class="fifth">&nbsp;</a></li>
+      <ul id="menu">
+        <li data-menuanchor="secmain"><a href="#" class="first">&nbsp;</a></li>
+        <li data-menuanchor="secstructure"><a href="#" class="second">&nbsp;</a></li>
+        <li data-menuanchor="secservices"><a href="#" class="third">&nbsp;</a></li>
+        <li data-menuanchor="secprojects"><a href="#" class="fourth">&nbsp;</a></li>
+        <li data-menuanchor="secteam"><a href="#" class="fifth">&nbsp;</a></li>
+        <li data-menuanchor="seccontact"><a href="#" class="sixth">&nbsp;</a></li>
       </ul>
     </div>
 
-    <section id="main">
+    <div class="static-content" id="our-structure">
       <div class="floating">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="logo">
+                  <img src="images/logo.png">
+                </div>
+                <div>
+                  <p>At Mellow we invest in ideas, we consult and advise early stage companies, develop software and create brand identities. We take your business seriously, and ourselves not to seriously. We wear our hearts in our oft-wrinkled sleeves.</p>
+                  <p>We are grateful for the companies who have trusted us, feel lucky to collaborate with such brilliant and amazing people. Can say we are proud of our project’s achievements.</p>
+                  <p>Our approach isn’t exactly customary, and our partners don’t act the “traditional” way. Currently we invest in-kind thanks to our highly qualified team, becoming co-founders of new ideas.</p>
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div>
+                  <div class="cross"></div>
+                </div>
+                <h3>Our Structure:</h3>
+                <div class="structure">
+                  <h2>1. Mellow Consulting</h2>
+                  <p>Design, Tech & Project Development + Instructive advice</p>
+                </div>
+                <div class="structure">
+                  <h2>2. Mellow Companies</h2>
+                  <p>Co-founding and collaborating in new ideas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="fullpage">
+
+      <section id="main" class="section">
+        <div class="floating">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div>
+                  <img src="images/welcome.png">
+                </div>
+                <p>We create, develop, design<br>and invest in good ideas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        
+      </section>
+
+      <section id="our-services" class="section">
+        <div class="floating">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-strategic"></i>
+                  </div>
+                  <p>Strategic<br>Decisions</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-social"></i>
+                  </div>
+                  <p>Social<br>Media</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-legal"></i>
+                  </div>
+                  <p>Legal &<br>Accounting</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-capital"></i>
+                  </div>
+                  <p>Capital<br>Investment</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-sale"></i>
+                  </div>
+                  <p>Sale<br>Connections</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-business"></i>
+                  </div>
+                  <p>Business<br>Strategy</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-web"></i>
+                  </div>
+                  <p>Web/app<br>development</p>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="service">
+                  <div>
+                    <i class="m-icon m-design"></i>
+                  </div>
+                  <p>Design<br>UX/UI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="our-projects" class="section">
+        <div class="floating">
+          <div class="container">
+            <div class="menu-projects">
               <div>
-                <img src="images/welcome.png">
+                <h2 class="main-title">Some of out projects:</h2>
               </div>
-              <p>We create, develop, design<br>and invest in good ideas</p>
+              <ul class="nav nav-pills">
+                <li>
+                  <a href="#">Mellow Consulting<sup>5</sup></a>
+                </li>
+                <li>
+                  <a href="#">All<sup>12</sup></a>
+                </li>
+                <li>
+                  <a href="#">Mellow Companies<sup>7</sup></a>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+              <ul>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="carousel-elem">
+                    <div>
+                      <img src="images/carousel/forty-two.png">
+                    </div>
+                    <div class="project-description">
+                      <h3>Hack Institute</h3>
+                      <p>Courses for developers</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+            <p class="jcarousel-pagination"></p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="our-structure">
-      <div class="floating">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 col-sm-offset-2">
-              <div class="logo">
-                <img src="images/logo.png">
+      <section id="team" class="section">
+        <div class="floating">
+          <div class="text-center">
+            <h2 class="main-title">Our Holding Team!</h2>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-2 col-sm-offset-2">
+                <div class="column">
+                  <div class="mate">
+                    <img src="images/team/alberto.png">
+                    <div class="info">
+                      <div class="mate-img">
+                        <img src="images/team/alberto.png">
+                      </div>
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mate">
+                    <img src="images/team/luis.png">
+                    <div class="info">
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                      <div class="mate-img">
+                        <img src="images/team/luis.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p>At Mellow we invest in ideas, we consult and advise early stage companies, develop software and create brand identities. We take your business seriously, and ourselves not to seriously. We wear our hearts in our oft-wrinkled sleeves.</p>
-                <p>We are grateful for the companies who have trusted us, feel lucky to collaborate with such brilliant and amazing people. Can say we are proud of our project’s achievements.</p>
-                <p>Our approach isn’t exactly customary, and our partners don’t act the “traditional” way. Currently we invest in-kind thanks to our highly qualified team, becoming co-founders of new ideas.</p>
+              <div class="col-sm-2">
+                <div class="column">
+                  <div class="mate">
+                    <img src="images/team/patricio.png">
+                    <div class="info">
+                      <div class="mate-img">
+                        <img src="images/team/patricio.png">
+                      </div>
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mate">
+                    <img src="images/team/alan.png">
+                    <div class="info">
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                      <div class="mate-img">
+                        <img src="images/team/alan.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-5">
-              <div>
-                <div class="cross"></div>
+              <div class="col-sm-2">
+                <div class="column">
+                  <div class="mate">
+                    <img src="images/team/carlos.png">
+                    <div class="info">
+                      <div class="mate-img">
+                        <img src="images/team/carlos.png">
+                      </div>
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mate">
+                    <img src="images/team/arturo.png">
+                    <div class="info">
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                      <div class="mate-img">
+                        <img src="images/team/arturo.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3>Our Structure:</h3>
-              <div class="structure">
-                <h2>1. Mellow Consulting</h2>
-                <p>Design, Tech & Project Development + Instructive advice</p>
-              </div>
-              <div class="structure">
-                <h2>2. Mellow Companies</h2>
-                <p>Co-founding and collaborating in new ideas.</p>
+              <div class="col-sm-2">
+                <div class="column">
+                  <div class="mate">
+                    <img src="images/team/andres.png">
+                    <div class="info">
+                      <div class="mate-img">
+                        <img src="images/team/andres.png">
+                      </div>
+                      <h4>Alberto Sustiel</h4>
+                      <div>
+                        <a href="#" class="in">&nbsp;</a>
+                      </div>
+                      <div>
+                        <span class="role">Mellow Founder</span>
+                      </div>
+                      <span>-</span>
+                      <div>
+                        <span class="spec">Operations</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mate">
+                    <img src="images/team/nose.png">
+                    <div class="info">
+                      <div>
+                        <h4>Alberto Sustiel</h4>
+                        <div>
+                          <a href="#" class="in">&nbsp;</a>
+                        </div>
+                        <div>
+                          <span class="role">Mellow Founder</span>
+                        </div>
+                        <span>-</span>
+                        <div>
+                          <span class="spec">Operations</span>
+                        </div>
+                        <div class="mate-img">
+                          <img src="images/team/nose.png">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="our-services">
-      <div class="floating">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2 col-sm-offset-3">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-strategic"></i>
-                </div>
-                <p>Strategic<br>Decisions</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-social"></i>
-                </div>
-                <p>Social<br>Media</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-legal"></i>
-                </div>
-                <p>Legal &<br>Accounting</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-capital"></i>
-                </div>
-                <p>Capital<br>Investment</p>
-              </div>
-            </div>
+      <section id="contact" class="section">
+        <div class="floating">
+          <div class="info">
+            <h4><a href="mailto:hola@mellow.cc">hola@mellow.cc</a> /// +52 (55) 67.30.15.42</h4>
+            <h1>Contact Us</h1>
+            <h4>Mazatlán #152, col. Condesa, México D.F.</h4>
           </div>
-          <div class="row">
-            <div class="col-sm-2 col-sm-offset-3">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-sale"></i>
-                </div>
-                <p>Sale<br>Connections</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-business"></i>
-                </div>
-                <p>Business<br>Strategy</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-web"></i>
-                </div>
-                <p>Web/app<br>development</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="service">
-                <div>
-                  <i class="m-icon m-design"></i>
-                </div>
-                <p>Design<br>UX/UI</p>
-              </div>
+          <div class="social">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-carousel">
+          <div>
+            <div class="floating-text">
+              <p>MELLOW IS A<br>TEAM OF HIGHLY<br>QUALIFIED<br>PROFESIONISTS<br>WHO CONSISTENTLY<br>BOOST TECH<br>STARTUPS</p>
+              <h3>PATRICIO AZNAR</h3>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="our-projects">
-      <div class="floating">
-        <div class="container">
-          <div class="menu-projects">
-            <div>
-              <h2 class="main-title">Some of out projects:</h2>
-            </div>
-            <ul class="nav nav-pills">
-              <li>
-                <a href="#">Mellow Consulting<sup>5</sup></a>
-              </li>
-              <li>
-                <a href="#">All<sup>12</sup></a>
-              </li>
-              <li>
-                <a href="#">Mellow Companies<sup>7</sup></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="jcarousel-wrapper">
-          <div class="jcarousel">
-            <ul>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="carousel-elem">
-                  <div>
-                    <img src="images/carousel/forty-two.png">
-                  </div>
-                  <div class="project-description">
-                    <h3>Hack Institute</h3>
-                    <p>Courses for developers</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-          <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-          <p class="jcarousel-pagination"></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="team">
-      <div class="floating">
-        <div class="text-center">
-          <h2 class="main-title">Our Holding Team!</h2>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2 col-sm-offset-2">
-              <div class="column">
-                <div class="mate">
-                  <img src="images/team/alberto.png">
-                  <div class="info">
-                    <div class="mate-img">
-                      <img src="images/team/alberto.png">
-                    </div>
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mate">
-                  <img src="images/team/luis.png">
-                  <div class="info">
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                    <div class="mate-img">
-                      <img src="images/team/luis.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="column">
-                <div class="mate">
-                  <img src="images/team/patricio.png">
-                  <div class="info">
-                    <div class="mate-img">
-                      <img src="images/team/patricio.png">
-                    </div>
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mate">
-                  <img src="images/team/alan.png">
-                  <div class="info">
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                    <div class="mate-img">
-                      <img src="images/team/alan.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="column">
-                <div class="mate">
-                  <img src="images/team/carlos.png">
-                  <div class="info">
-                    <div class="mate-img">
-                      <img src="images/team/carlos.png">
-                    </div>
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mate">
-                  <img src="images/team/arturo.png">
-                  <div class="info">
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                    <div class="mate-img">
-                      <img src="images/team/arturo.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="column">
-                <div class="mate">
-                  <img src="images/team/andres.png">
-                  <div class="info">
-                    <div class="mate-img">
-                      <img src="images/team/andres.png">
-                    </div>
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="mate">
-                  <img src="images/team/nose.png">
-                  <div class="info">
-                    <h4>Alberto Sustiel</h4>
-                    <div>
-                      <a href="#" class="in">&nbsp;</a>
-                    </div>
-                    <div>
-                      <span class="role">Mellow Founder</span>
-                    </div>
-                    <span>-</span>
-                    <div>
-                      <span class="spec">Operations</span>
-                    </div>
-                    <div class="mate-img">
-                      <img src="images/team/nose.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="floating">
-        <div class="info">
-          <h4><a href="mailto:hola@mellow.cc">hola@mellow.cc</a> /// +52 (55) 67.30.15.42</h4>
-          <h1>Contact Us</h1>
-          <h4>Mazatlán #152, col. Condesa, México D.F.</h4>
-        </div>
-        <div class="social">
-          <a href="#"></a>
-        </div>
-      </div>
-    </section>
+        <button id="toggle-contact">
+          <i class="fa fa-arrow-left"></i>
+          <i class="fa fa-times"></i>
+          </button>
+      </section>
+    </div>
     
     
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/jcarousel/dist/jquery.jcarousel.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

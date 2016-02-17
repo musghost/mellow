@@ -1,5 +1,68 @@
+'use strict';
 (function($) {
   $(function() {
+
+    var setMessage = function(index) {
+      switch(index) {
+        case 1:
+          changeTarget('Mellow Holding');
+          break;
+        case 2:
+          changeTarget('Our structure');
+          break;
+        case 3:
+          changeTarget('Our services');
+          break;
+        case 4:
+          changeTarget('Portfolio');
+          break;
+        case 5:
+          changeTarget('Our team');
+          break;
+        case 6:
+          changeTarget("Let's talk");
+          break;
+      }
+    }
+
+    var changeTarget = function(msg) {
+      $('#target').html(msg);
+    };
+
+    $("#show-menu").click(function(e) {
+      $(".menu").fadeIn();
+    });
+    $("#close-menu").click(function(e) {
+      $(".menu").fadeOut();
+    });
+
+    $('#toggle-contact').click(function() {
+      $('.contact-carousel').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+
+    $('#fullpage').fullpage({
+      anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', 'secteam', 'seccontact'],
+      menu: '#menu',
+      scrollingSpeed: 700,
+      onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+        console.log(anchorLink, index, slideIndex, direction);
+      },
+      onLeave: function(index, nextIndex, direction) {
+        $(".menu").fadeOut();
+
+        if (nextIndex == 2) {
+          $('#our-structure').show();
+        }
+
+        if (index == 2) {
+          $('#our-structure').hide();
+        }
+
+        setMessage(nextIndex);
+      }
+    });
+
     var jcarousel = $('.jcarousel');
 
     jcarousel

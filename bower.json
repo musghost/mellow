@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "jcarousel": "~0.3.4",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "fullpage.js": "^2.7.7"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -12,6 +13,13 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "less/font-awesome.less",
+        "scss/font-awesome.scss",
+        "fonts/*"
       ]
     }
   },
