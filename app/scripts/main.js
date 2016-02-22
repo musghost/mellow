@@ -6,6 +6,7 @@
       switch(index) {
         case 1:
           changeTarget('Mellow Holding');
+          $('#menu').addClass('hidden');
           break;
         case 2:
           changeTarget('Our structure');
@@ -15,6 +16,7 @@
           break;
         case 4:
           changeTarget('Portfolio');
+          $('#menu').addClass('hidden');
           break;
         case 5:
           changeTarget('Our team');
@@ -22,6 +24,10 @@
         case 6:
           changeTarget("Let's talk");
           break;
+      }
+
+      if (index != 1 && index != 4) {
+        $('#menu').removeClass('hidden');
       }
     }
 
@@ -52,7 +58,13 @@
         $(".menu").fadeOut();
 
         if (nextIndex == 2) {
-          $('#our-structure').show();
+          if (index == 3){
+            setTimeout(function() {
+              $('#our-structure').show();
+            }, 300);
+          } else {
+            $('#our-structure').show();
+          }
         }
 
         if (index == 2) {
