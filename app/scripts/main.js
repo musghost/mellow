@@ -5,7 +5,7 @@
     var setMessage = function(index) {
       switch(index) {
         case 1:
-          changeTarget('Mellow Holding');
+          changeTarget('Mellow CC');
           $('#menu').addClass('hidden');
           break;
         case 2:
@@ -20,8 +20,7 @@
           break;
         case 5:
           changeTarget('Our team');
-          break;
-        case 6:
+        case 5:
           changeTarget("Let's talk");
           break;
       }
@@ -48,7 +47,8 @@
     });
 
     $('#fullpage').fullpage({
-      anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', 'secteam', 'seccontact'],
+      anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
+      'seccontact'],
       menu: '#menu',
       scrollingSpeed: 700,
       onSlideLeave: function (anchorLink, index, slideIndex, direction) {

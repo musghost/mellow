@@ -346,11 +346,13 @@ section {
 
   img {
     max-width: 100%;
+    opacity: 0.9;
   }
 
   p {
     margin: 10px 20px;
     letter-spacing: 2px;
+    text-shadow: 3px 3px #8A8A8A;
   }
 }
 
