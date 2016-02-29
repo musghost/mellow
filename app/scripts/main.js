@@ -5,7 +5,7 @@
     var setMessage = function(index) {
       switch(index) {
         case 1:
-          changeTarget('Mellow CC');
+          changeTarget('Mellow && CC');
           $('#menu').addClass('hidden');
           break;
         case 2:
