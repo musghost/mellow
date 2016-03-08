@@ -101,6 +101,10 @@ html {
       height: 2px;
       background: #fff;
       content: '';
+
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
     }
   }
 
@@ -218,6 +222,7 @@ html {
     padding: 3px 20px;
     display: inline-block;
     font-size: 11px;
+    cursor: pointer;
   }
 
 }
@@ -365,6 +370,10 @@ section {
       position: absolute;
       right: 0;
       bottom: 0;
+
+      @media (max-width: $screen-sm) {
+        position: static;
+      }
     }
 
     &:before {
@@ -376,11 +385,20 @@ section {
       bottom: 0;
       left: 54%;
       display: block;
+
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
     }
   }
 
   .logo {
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 25px;
+      text-align: center;
+    }
   }
 
   p {
@@ -398,6 +416,10 @@ section {
     margin-left: -16px;
     margin-top: -16px;
     margin-bottom: 45px;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
 
     &:after {
       position: absolute;
@@ -455,8 +477,16 @@ section {
 
 #our-services {
 
+  @media (max-width: $screen-sm) {
+    height: auto;
+  }
+
   .floating {
     margin-top: 65px;
+    @media (max-width: $screen-sm) {
+      position: static;
+      transform: none;
+    }
   }
 
   .service {
@@ -685,6 +715,16 @@ section {
   text-align: center;
   text-transform: uppercase;
 
+  @media (max-width: $screen-sm) {
+    height: auto;
+    padding: 50px 0 50px;
+
+    .floating {
+      position: static;
+      transform: none;
+    }
+  }
+
   .floating {
     margin-top: 65px;
   }
@@ -704,6 +744,10 @@ section {
     font-weight: bold;
     margin: 0;
     font-family: 'Gotham';
+
+    @media (max-width: $screen-sm) {
+      font-size: 50px;
+    }
   }
 
   a {
@@ -728,6 +772,16 @@ section {
         margin-left: 40px;
       }
     }
+
+    @media (max-width: $screen-sm) {
+      a {
+        margin: 20px 40px;
+        display: block;
+        & + a {
+          margin: 20px 40px;
+        }
+      }
+    }
   }
 
   .contact-carousel {
@@ -743,6 +797,11 @@ section {
     color:#fff;
     transition: left 0.6s ease;
     font-family: 'Varela-Round';
+
+    @media (max-width: $screen-sm) {
+      position: static;
+      display: none;
+    }
 
     &.active {
       left: 50%;
@@ -803,5 +862,185 @@ section {
   &:hover {
     color: #d0ccc7;
     background: #fff;
+  }
+}
+
+#curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 3;
+  opacity: 0.6;
+  display: none;
+}
+
+#jobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+
+  .stack-jobs {
+    background: #fff;
+    float: left;
+    width: 45%;
+    height: 400px;
+  }
+
+  .job-description,
+  .job-application {
+    float: left;
+    width: 55%;
+    background: rgba(0, 0, 0, 0.8);
+    height: 400px;
+    padding: 60px 50px;
+    color: #fff;
+    font-family: 'Varela';
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    border: 1px solid #222;
+    position: relative;
+    display: none;
+  }
+
+  .job-application {
+    padding: 50px 80px;
+    text-align: center;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
+
+    input[type="text"] {
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #fff;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .file {
+      overflow: hidden;
+      text-transform: uppercase;
+      font-size: 11px;
+
+      i {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        float: left;
+        background: {
+          image: url('../images/sprite-buttons.png');
+          position: -63px -135px;
+        }
+        margin-right: 10px;
+
+        &.add-port {
+          background-position: -63px -166px;
+        }
+      }
+
+      span {
+        float: left
+      }
+
+      input {
+        display: block;
+        opacity: 0;
+      }
+    }
+
+    .control {
+      margin-bottom: 20px;
+    }
+
+    .button {
+      color: #414142;
+      padding: 2px 30px;
+      text-transform: uppercase;
+      border-radius: 0;
+      background: #fff;
+      border: 0;
+      float: right;
+    }
+  }
+
+  .close-jobs {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: {
+      image: url('../images/sprite-buttons.png');
+      position: 0 -307px;
+      color: transparent;
+    }
+    width: 26px;
+    height: 26px;
+    border: 0;
+  }
+
+  .apply {
+    position: absolute;
+    bottom: -45px;
+    right: 15px;
+    color: #414142;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid $mellow;
+    background: #fff;
+  }
+
+  .job {
+    padding: 20px 25px;
+    font-size: 11px;
+    border: 1px solid #eee;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(254, 218, 0, 0.15);
+    }
+
+    span {
+      display: block;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 13px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .where {
+      color: #000;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
   }
 }

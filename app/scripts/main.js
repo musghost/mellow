@@ -46,34 +46,39 @@
       $(this).toggleClass('active');
     });
 
-    $('#fullpage').fullpage({
-      anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
-      'seccontact'],
-      menu: '#menu',
-      scrollingSpeed: 700,
-      onSlideLeave: function (anchorLink, index, slideIndex, direction) {
-        console.log(anchorLink, index, slideIndex, direction);
-      },
-      onLeave: function(index, nextIndex, direction) {
-        $(".menu").fadeOut();
+    if (window.innerWidth >= 769){
+      $('#fullpage').fullpage({
+        anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
+        'seccontact'],
+        menu: '#menu',
+        scrollingSpeed: 700,
+        onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+          console.log(anchorLink, index, slideIndex, direction);
+        },
+        onLeave: function(index, nextIndex, direction) {
+          $(".menu").fadeOut();
 
-        if (nextIndex == 2) {
-          if (index == 3){
-            setTimeout(function() {
+          if (nextIndex == 2) {
+            if (index == 3){
+              setTimeout(function() {
+                $('#our-structure').show();
+              }, 300);
+            } else {
               $('#our-structure').show();
-            }, 300);
-          } else {
-            $('#our-structure').show();
+            }
           }
-        }
 
-        if (index == 2) {
-          $('#our-structure').hide();
-        }
+          if (index == 2) {
+            $('#our-structure').hide();
+          }
 
-        setMessage(nextIndex);
-      }
-    });
+          setMessage(nextIndex);
+        }
+      });
+    } else {
+      $('#main + .section').remove();
+      $('#our-structure').removeClass('static-content').addClass('section').insertAfter('#main');
+    }
 
     var jcarousel = $('.jcarousel');
 
@@ -121,8 +126,7 @@
         }
       });
   });
-  console.log($('#main').outerHeight(true));
-  console.log($('#our-structure').outerHeight(true));
+
   $('.first').affix({
     offset: {
       top: function() {
@@ -133,4 +137,33 @@
       }
     }
   });
+
+  var descriptions = $('.job-description');
+  var applications = $('.job-application');
+
+  $('.job').each(function(i, job) {
+    $(job).click(function(e) {
+      descriptions.removeClass('show');
+      applications.removeClass('show');
+      descriptions.eq(i).addClass('show');
+    });
+  });
+
+  $('.apply').each(function(i, apply) {
+    $(apply).click(function(e) {
+      descriptions.removeClass('show');
+      applications.addClass('show');
+    });
+  });
+
+  $('.close-jobs').click(function(){
+    $('#curtain, #jobs').removeClass('show');
+  });
+
+  $('.work').click(function(){
+    $(".menu").fadeOut(function() {
+      $('#curtain, #jobs').addClass('show');
+    });
+  });
+
 })(jQuery);
