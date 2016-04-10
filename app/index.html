@@ -271,7 +271,7 @@
           <div class="jcarousel-wrapper">
             <div class="jcarousel">
               <ul>
-                <li>
+                <li class="open-project" data-project="0">
                   <div class="carousel-elem">
                     <div>
                       <img src="images/projects/Screens_Allgo_C.jpg">
@@ -791,6 +791,60 @@
         </div>
       </section>
     </div>
+    <div id="project">
+      <section class="section">
+        <div class="floating">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+                <div class="project-content" id="target-modal">pi</div>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="x-tmpl-mustache" id="modal">
+        <a class="nav-button nav-button-left" href="#"></a>
+        <a class="nav-button nav-button-right" href="#"></a>
+        <a class="close-button" href="#"></a>
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="image">
+              <img src="{{image}}">
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="social">
+                  <a href="{{twitter}}"><i class="fa fa-twitter"></i></a>
+                  <a href="{{facebook}}"><i class="fa fa-facebook"></i></a>
+                  <a href="{{instagram}}"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="text-center url">
+                  <a href="http://{{url}}" class="sqare-url">{{url}}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h3>{{title}}</h3>
+            <h4>{{subTitle}}</h4>
+            {{#text}}
+              <p>{{.}}</p>
+            {{/text}}
+            <ul>
+              {{#list}}
+                <li>{{.}}</li>
+              {{/list}}
+            </ul>
+          </div>
+        </div>
+    </script>
     
     
     <!-- build:js scripts/vendor.js -->
@@ -800,6 +854,7 @@
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
     <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <script src="/bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

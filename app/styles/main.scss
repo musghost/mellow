@@ -1044,3 +1044,131 @@ section {
     }
   }
 }
+
+#project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+
+  .project-content {
+    background: #D6D4D4;
+    position: relative;
+
+    & > a.nav-button {
+      width: 40px;
+      height: 40px;
+      border: 2px solid $mellow;
+      content: '';
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      cursor: pointer;
+      background: {
+        image: url(../images/sprite-buttons.png);
+        position: -36px -304px;
+      }
+
+      &.nav-button-left {
+        left: -50px;
+      }
+
+      &.nav-button-right {
+        right: -50px;
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+
+    & > a.close-button {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: {
+        image: url(../images/sprite-buttons.png);
+        position: 0 -307px;
+      }
+    }
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .social,
+  .url {
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    a {
+      color: #414142;
+      font-size: 20px;
+      display: inline-block;
+      margin-right: 15px;
+      transition: transform .1s ease-out;
+
+      &:hover {
+        transform: scale(1.4, 1.4);
+      }
+
+      & + a {
+        margin-left: 8px;
+      }
+    }
+
+    a.sqare-url {
+      border: 1px solid #5d5748;
+      padding: 3px 25px;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+        background: #5d5748;
+        color: #D6D4D4;
+      }
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    background: $mellow;
+    text-transform: uppercase;
+    width: 60%;
+    font-size: 14px;
+    padding: 3px 10px;
+    margin-bottom: 50px;
+  }
+
+  p {
+    padding-right: 50px;
+    line-height: 25px;
+
+    & + ul {
+      margin-top: 40px;
+    }
+  }
+
+  ul {
+    line-height: 25px;
+    padding-left: 20px;
+    list-style-type: square;
+  }
+}

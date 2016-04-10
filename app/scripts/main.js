@@ -1,4 +1,27 @@
 'use strict';
+
+var projects = [
+  {
+    twitter: 'https://twitter.com/',
+    facebook: 'https://facebook.com',
+    instagram: 'https://www.instagram.com/',
+    url: 'allgo.mx',
+    title: 'Allgo',
+    subTitle: 'A mellow company',
+    image: 'images/projects/screen/allgo.png',
+    text: [
+      "At Mellow we invest in ideas, we consult and advise early stage companies, develop software and create brand identities. We take your business seriously, and ourselves not to seriously."
+    ],
+    list: [
+      "Brand identity",
+      "Website design",
+      "iOS / Android app",
+      "Development",
+      "Social Media"
+    ]
+  }
+];
+
 (function($) {
   $(function() {
 
@@ -163,6 +186,25 @@
   $('.work').click(function(){
     $(".menu").fadeOut(function() {
       $('#curtain, #jobs').addClass('show');
+    });
+  });
+
+  $('.open-project').click(function(e) {
+    e.preventDefault();
+    var projectId = $(this).data('project');
+    var template = $('#modal').html();
+    console.log(template);
+    Mustache.parse(template);
+
+    var rendered = Mustache.render(template, projects[projectId]);
+    $('#target-modal').html(rendered);
+    $('#curtain').addClass('show');
+    $('#project').show();
+
+    $('#project').find('.close-button').click(function(e) {
+      e.preventDefault();
+      $('#curtain').removeClass('show');
+      $('#project').hide();
     });
   });
 

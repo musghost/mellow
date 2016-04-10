@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "jcarousel": "~0.3.4",
     "font-awesome": "~4.5.0",
-    "fullpage.js": "^2.7.7"
+    "fullpage.js": "^2.7.7",
+    "mustache.js": "mustache#^2.2.1"
   },
   "overrides": {
     "bootstrap-sass": {
