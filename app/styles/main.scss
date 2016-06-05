@@ -228,7 +228,6 @@ html {
 }
 
 header {
-  background: $mellow;
   position: fixed;
   left: 0;
   top: 0;
@@ -255,6 +254,10 @@ header {
     }
   }
 
+  span {
+    color: $mellow;
+  }
+
   .button-span {
     display: inline-block;
     margin-top: 14px;
@@ -266,9 +269,13 @@ header {
       display: block;
       width: 30px;
       height: 3px;
-      background: #414142;
+      background: $mellow;
       margin-bottom: 4px;
     }
+  }
+
+  #target {
+    color: $mellow;
   }
 }
 
@@ -350,7 +357,7 @@ section {
   font-size: 22px;
 
   img {
-    max-width: 100%;
+    max-width: 40%;
     opacity: 0.9;
   }
 
