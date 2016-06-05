@@ -234,6 +234,25 @@ header {
   right: 0;
   padding: 10px 58px;
   z-index: 2;
+  background: $mellow;
+
+  &.colored {
+    background: none;
+    
+    .button-span {
+      span {
+        background: $mellow;
+      }
+    }
+
+    #target {
+      color: $mellow;
+    }
+
+    span {
+      color: $mellow;
+    }
+  }
 
   h2 {
     display: inline-block;
@@ -254,10 +273,6 @@ header {
     }
   }
 
-  span {
-    color: $mellow;
-  }
-
   .button-span {
     display: inline-block;
     margin-top: 14px;
@@ -269,13 +284,9 @@ header {
       display: block;
       width: 30px;
       height: 3px;
-      background: $mellow;
+      background: #414142;
       margin-bottom: 4px;
     }
-  }
-
-  #target {
-    color: $mellow;
   }
 }
 

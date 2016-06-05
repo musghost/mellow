@@ -30,6 +30,7 @@ var projects = [
         case 1:
           changeTarget('Mellow C&C');
           $('#menu').addClass('hidden');
+          $('header').addClass('colored');
           break;
         case 2:
           changeTarget('Our structure');
@@ -50,6 +51,7 @@ var projects = [
 
       if (index != 1 && index != 4) {
         $('#menu').removeClass('hidden');
+        $('header').removeClass('colored');
       }
     }
 
