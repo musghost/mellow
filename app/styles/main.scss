@@ -3,7 +3,7 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
-@import "bower_components/fullpage.js/jquery.fullPage.scss";
+@import "bower_components/fullpage.js/jquery.fullPage.css";
 // endbower
 
 @import "jcarousel";
@@ -45,7 +45,7 @@ $icon-font-path: '../fonts/';
 
 /* COLORS */
 
-$mellow: #FEDA00;
+$mellow: #333333;;
 $color: #989494;
 
 body,
@@ -64,6 +64,7 @@ html {
   &.i-close {
     width: 22px;
     height: 22px;
+    background-position: 3.3% 85.3%;
   }
 }
 
@@ -76,13 +77,13 @@ html {
   display: none;
   position: fixed;
   z-index: 3;
-  background: #414142;
+  background: #e7e7e7;
   top: 0;
   left: 0;
   bottom: 0;
   width: 600px;
   @include clearfix;
-  color: #fff;
+  color: #333333;;
   font-family: 'Gotham';
 
   .mellow-logo {
@@ -117,11 +118,11 @@ html {
   }
 
   .right-menu {
-    background: #484747;
+    background: #d4d4d4;
   }
 
   p {
-    max-width: 160px;
+    max-width: 100%;
     font-size: 11px;
     font-weight: normal;
     line-height: 19px;
@@ -164,12 +165,12 @@ html {
       display: inline-block;
       width: 60px;
       height: 60px;
-      border: 1px solid #fff;
+      border: 1px solid #333333;
       float: left;
       font-size: 25px;
       text-align: center;
       line-height: 60px;
-      color: #fff;
+      color: $mellow;
 
       & + a {
         border-left: 0;
@@ -181,12 +182,12 @@ html {
     display: block;
     font-size: 12px;
     a {
-      color: #fff;
+      color: #333333;;
     }
   }
 
   .index {
-    color: $mellow;
+    color:#333333;
     font-size: 11px;
     display: inline-block;
     margin-right: 4px;
@@ -201,8 +202,8 @@ html {
       display: block;
       text-align: center;
       padding: 20px 0;
-      color: #fff;
-      border-bottom: 1px solid #5c595a;
+      color: #333333;
+      border-top: 1px solid #5c595a;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -217,8 +218,8 @@ html {
   }
 
   .work {
-    background: #414142;
-    border: 1px solid #5d5748;
+    background: #FEDA00;;
+    border: 1px solid #FEDA00;;
     padding: 3px 20px;
     display: inline-block;
     font-size: 11px;
@@ -234,10 +235,11 @@ header {
   right: 0;
   padding: 10px 58px;
   z-index: 2;
-  background: $mellow;
+  background: #e7e7e7;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.7);
 
   &.colored {
-    background: none;
+    background:#e7e7e7;
     
     .button-span {
       span {
@@ -323,7 +325,7 @@ header {
         width: 15px;
         height: 15px;
         display: inline-block;
-        background-color: $mellow;
+        background-color:#FEDA00;
         border-radius: 50%;
         z-index: 1;
         position: relative;
@@ -335,7 +337,7 @@ header {
         a {
           width: 18px;
           height: 18px;
-          border: 2px solid $mellow;
+          border: 2px solid #FEDA00;
           margin-left: -2px;
         }
       }
@@ -510,17 +512,18 @@ section {
   .service {
     text-align: center;
     border: 1px solid #D6D4D4;
-    margin-bottom: 20px;
-    padding: 20px 0;
-    border-bottom: 8px solid $mellow;
+    margin-bottom: 10px;
+    padding: 10px;
+    //border-bottom: 8px solid $mellow;
     font-family: 'Gotham';
+    width: 100px;
   }
 
   .m-icon {
     width: 60px;
     height: 60px;
     display: inline-block;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     background: {
       image: url('../images/sprite.png');
       repeat: no-repeat;
@@ -565,23 +568,28 @@ section {
     letter-spacing: 3px;
     font-size: 12px;
   }
+
+  li {
+    margin-left:-20px;
+  }
 }
 
 .main-title {
   display: inline-block;
-  border: 2px solid $mellow;
+  //border: 2px solid $mellow;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
   letter-spacing: 2px;
   padding: 7px 10px;
   margin-bottom: 30px;
-  background: #fff;
+  //background: #fff;
   font-family: 'Gotham';
 }
 
 #our-projects {
-  background: linear-gradient(180deg, #EDECEC 65%, #fff 50%);
+  //background: linear-gradient(180deg, #EDECEC 65%, #fff 50%);
+  background:#EDECEC;
 
   .floating {
     margin-top: 65px;
@@ -633,9 +641,9 @@ section {
   }
 
   .carousel-elem {
-    color: #fff;
-    background: #414142;
-    padding: 7px;
+    color: #414142;
+    background: #fff;
+    //padding: 7px;
     margin: 0 12px;
 
     img {
@@ -657,8 +665,9 @@ section {
   }
 
   .project-description {
-    padding: 0 15px;
+    padding: 0 15px 5px 0;
     font-family: 'Gotham';
+    text-align: center;
   }
 }
 
@@ -776,10 +785,10 @@ section {
     margin-top: 70px;
     a {
       display: inline-block;
-      border: 3px solid $mellow;
+      border: 3px solid #FEDA00;
       padding: 7px 50px;
       font-size: 30px;
-      color: $mellow;
+      color: #FEDA00;
 
       &:hover {
         background: $mellow;
@@ -808,7 +817,7 @@ section {
     bottom: 0;
     top: 65px;
     z-index: 2;
-    background: #d0ccc7;
+    background: #333333;
     transform: skewX(-13deg);
     width: 100%;
     text-align: left;
