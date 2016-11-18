@@ -32,19 +32,19 @@ var projects = [
           $('#menu').addClass('hidden');
           $('header').addClass('colored');
           break;
+        //case 2:
+          //changeTarget('Our structure');
+          //break;
         case 2:
-          changeTarget('Our structure');
-          break;
-        case 3:
           changeTarget('Our services');
           break;
-        case 4:
+        case 3:
           changeTarget('Portfolio');
           $('#menu').addClass('hidden');
           break;
-        case 5:
-          changeTarget('Our team');
-        case 5:
+        //case 5:
+          //changeTarget('Our team');
+        case 4:
           changeTarget("Let's talk");
           break;
       }
@@ -73,7 +73,7 @@ var projects = [
 
     if (window.innerWidth >= 769){
       $('#fullpage').fullpage({
-        anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
+        anchors: ['secmain', 'secservices', 'secprojects', //'secteam', 
         'seccontact'],
         menu: '#menu',
         scrollingSpeed: 700,
@@ -82,20 +82,6 @@ var projects = [
         },
         onLeave: function(index, nextIndex, direction) {
           $(".menu").fadeOut();
-
-          if (nextIndex == 2) {
-            if (index == 3){
-              setTimeout(function() {
-                $('#our-structure').show();
-              }, 300);
-            } else {
-              $('#our-structure').show();
-            }
-          }
-
-          if (index == 2) {
-            $('#our-structure').hide();
-          }
 
           setMessage(nextIndex);
         }
@@ -158,7 +144,7 @@ var projects = [
         return $('#main').outerHeight(true);
       },
       bottom: function() {
-        return $('#main').outerHeight(true) + $('#our-structure').outerHeight(true);
+        return $('#main').outerHeight(true) + $('#our-services').outerHeight(true);
       }
     }
   });
