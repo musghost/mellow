@@ -31,21 +31,25 @@ var projects = [
           changeTarget('Mellow C&C');
           $('#menu').addClass('hidden');
           $('header').addClass('colored');
+           $('#made').removeClass('hidden');
           break;
         //case 2:
           //changeTarget('Our structure');
           //break;
         case 2:
           changeTarget('Our services');
+           $('#made').removeClass('hidden');
           break;
         case 3:
           changeTarget('Portfolio');
           $('#menu').addClass('hidden');
+          $('#made').addClass('hidden');
           break;
         //case 5:
           //changeTarget('Our team');
         case 4:
           changeTarget("Let's talk");
+           $('#made').removeClass('hidden');
           break;
       }
 
