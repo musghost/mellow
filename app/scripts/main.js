@@ -114,12 +114,12 @@ var projects = [
         wrap: 'circular'
       });
 
-    $('.jcarousel-control-prev')
+    $('.control-prev')
       .jcarouselControl({
         target: '-=1'
       });
 
-    $('.jcarousel-control-next')
+    $('.control-next')
       .jcarouselControl({
         target: '+=1'
       });

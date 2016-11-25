@@ -708,12 +708,34 @@ section {
       }
     }
   }
+  
+  .jcarousel{
+    ul {
+      left: 50%;
+      margin-left: 155px;
+    }
+  } 
 
   .carousel-elem {
     color: #414142;
     background: #fff;
     //padding: 7px;
-    margin: 0 12px;
+    margin: 0 25px;
+
+    &:hover {
+      overflow: hidden;
+
+      img {
+        transform:scale(1.7);
+        transition: all 1s ease;
+        opacity: 0.3;
+      }
+
+      .project-description {
+        position: relative;
+       
+      }
+    }
 
     img {
       max-width: 100%;
@@ -732,6 +754,32 @@ section {
       font-size: 11px;
       font-family: 'DroidSerif';
     }
+  }
+
+  .control-prev, 
+  .control-next {
+    background-image: url("../images/Assets_Site-06.png");
+    height: 40px;
+    width: 40px;
+    background-size:contain; 
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+
+    &:hover {
+      background-image: url("../images/Assets_Site-07.png");
+    }
+  }
+
+  .control-prev {
+    left: 25px;
+  }
+
+  .control-next{
+    right: 25px;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
   }
 
   .project-description {
