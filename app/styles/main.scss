@@ -564,6 +564,23 @@ section {
       transform: none;
     }
   }
+  
+  .contenedor {
+    display: flex;
+    align-items: flex-start;
+    margin:auto;
+    width: 78%;
+
+    .divservices {
+      flex:1;
+      margin:auto;
+    }
+  }
+
+  .sqrservices {
+    width: 205px;
+    margin:0 25px;
+  }
 
   .service {
     text-align: center;
@@ -712,7 +729,7 @@ section {
   .jcarousel{
     ul {
       left: 50%;
-      margin-left: 155px;
+      margin-left: -155px;
     }
   } 
 
@@ -733,7 +750,6 @@ section {
 
       .project-description {
         position: relative;
-       
       }
     }
 
