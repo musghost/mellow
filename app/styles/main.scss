@@ -81,6 +81,77 @@ $icon-font-path: '../fonts/';
   src: url('../fonts/DroidSerif/DroidSerif-Italic.ttf') format('truetype');
 }
 
+@media screen and (max-device-width: 480px) {
+  header.a {
+    padding: 5px 18px;
+  }
+
+  p#made {
+    margin:0;
+  }
+
+  div.menu .menu-padding {
+    padding: 20px 30px 0;
+  }
+
+  div.menu .mellow-logo {
+    margin-top: 0px;
+    text-align: center;
+  }
+  
+  div.menu .right-menu .place-bottom {
+    transform:translateX(-100%);
+    padding-bottom: 20px;
+  }
+
+  div.menu .right-menu .place-bottom ul a {
+    padding: 8px 0;
+  }
+
+  div.selector ul{
+    padding:0;
+  }
+
+  div.selector {
+    left:30px;
+  }
+
+  #our-services div.container .contenedor {
+    margin-left:50px;
+    flex-wrap:wrap;
+  }
+
+  #our-services div.container .contenedor .divservices {
+    flex-basis: 50%;
+    text-align:center;
+  }
+
+  #our-services div.container .contenedor .divservices .service {
+    margin:auto;
+  }
+
+  #our-projects div.jcarousel ul {
+    margin-left: 0px;
+  }
+
+  #our-projects div.jcarousel .carousel-elem {
+    margin:0 75px;
+  }
+
+  #contact div.social {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: 38px;
+  }
+
+  #contact div.info {
+    width: 90%;
+    margin-left: 38px;
+  }
+
+
+}
+
 /* COLORS */
 
 $mellow: #FEDA00;
@@ -178,6 +249,7 @@ html {
     left: 0;
     right: 0;
     padding: 50px;
+
   }
   .menu-padding {
     padding: 20px 50px 0;
@@ -567,37 +639,41 @@ section {
   
   .contenedor {
     display: flex;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
     margin:auto;
     width: 78%;
+    margin-left: 190px;
 
     .divservices {
       flex:1;
       margin:auto;
+      margin-top: 0;
     }
-  }
-
-  .sqrservices {
-    width: 205px;
-    margin:0 25px;
   }
 
   .service {
     text-align: center;
     border: 1px solid #D6D4D4;
     margin-bottom: 10px;
-    padding: 10px;
+    //padding: 10px;
     //border-bottom: 8px solid $mellow;
     font-family: 'Gotham';
-    width: 100px;
+    width: 80px;
+    height: 80px;
+    position: relative;
 
     img {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      margin-left: -20px;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
     }
   }
 
-  .m-icon {
+  /*.m-icon {
     width: 60px;
     height: 60px;
     display: inline-block;
@@ -638,7 +714,7 @@ section {
     &.m-design {
       background-position: -180px -60px;
     }
-  }
+  }*/
 
   p {
     font-weight: bold;
@@ -898,6 +974,10 @@ section {
     font-size: 16px;
     margin-top: 0;
     font-family: 'DroidSerif';
+
+    @media (max-width: $screen-sm) {
+      font-size: 13px;
+    }
   }
 
   h1 {
@@ -908,6 +988,7 @@ section {
 
     @media (max-width: $screen-sm) {
       font-size: 50px;
+      margin: 10px 0px;
     }
   }
 
@@ -936,10 +1017,14 @@ section {
 
     @media (max-width: $screen-sm) {
       a {
-        margin: 20px 40px;
-        display: block;
+        width: 46px;
+        height: 46px;
+        margin:10px;
+        font-size: 16px;
+        display: inline-block;
+        padding: 7px;
         & + a {
-          margin: 20px 40px;
+          margin:10px;
         }
       }
     }

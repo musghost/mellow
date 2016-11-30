@@ -53,7 +53,7 @@ var projects = [
           break;
       }
 
-      if (index != 1 && index != 4) {
+      if (index != 1 && index != 3) {
         $('#menu').removeClass('hidden');
         $('header').removeClass('colored');
       }
