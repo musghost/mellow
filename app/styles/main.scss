@@ -3,7 +3,7 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
-@import "bower_components/fullpage.js/jquery.fullPage.scss";
+@import "bower_components/fullpage.js/jquery.fullPage.css";
 // endbower
 
 @import "jcarousel";
@@ -43,6 +43,115 @@ $icon-font-path: '../fonts/';
   src: url('../fonts/varela/VarelaRound-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  font-weight: bold;
+  src: url('../fonts/AkzidenzGrotesk/AkzidenzGrotesk-BoldCond.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  font-weight: normal;
+  src: url('../fonts/AkzidenzGrotesk/AkzidenzGrotesk-MediumCond.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: normal;
+  src: url('../fonts/DroidSerif/DroidSerif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: bold;
+  src: url('../fonts/DroidSerif/DroidSerif-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/DroidSerif/DroidSerif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DroidSerif';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/DroidSerif/DroidSerif-Italic.ttf') format('truetype');
+}
+
+@media screen and (max-device-width: 480px) {
+  header.a {
+    padding: 5px 18px;
+  }
+
+  p#made {
+    margin:0;
+  }
+
+  div.menu .menu-padding {
+    padding: 20px 30px 0;
+  }
+
+  div.menu .mellow-logo {
+    margin-top: 0px;
+    text-align: center;
+  }
+  
+  div.menu .right-menu .place-bottom {
+    transform:translateX(-100%);
+    padding-bottom: 20px;
+  }
+
+  div.menu .right-menu .place-bottom ul a {
+    padding: 8px 0;
+  }
+
+  div.selector ul{
+    padding:0;
+  }
+
+  div.selector {
+    left:30px;
+  }
+
+  #our-services div.container .contenedor {
+    margin-left:50px;
+    flex-wrap:wrap;
+  }
+
+  #our-services div.container .contenedor .divservices {
+    flex-basis: 50%;
+    text-align:center;
+  }
+
+  #our-services div.container .contenedor .divservices .service {
+    margin:auto;
+  }
+
+  #our-projects div.jcarousel ul {
+    margin-left: 0px;
+  }
+
+  #our-projects div.jcarousel .carousel-elem {
+    margin:0 75px;
+  }
+
+  #contact div.social {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: 38px;
+  }
+
+  #contact div.info {
+    width: 90%;
+    margin-left: 38px;
+  }
+
+
+}
+
 /* COLORS */
 
 $mellow: #FEDA00;
@@ -52,7 +161,8 @@ body,
 html {
   height: 100%;
   position: relative;
-  font-family: 'Calibri';
+  font-family: 'AkzidenzGrotesk';
+  color:  #414142;
 }
 
 .icons {
@@ -64,6 +174,7 @@ html {
   &.i-close {
     width: 22px;
     height: 22px;
+    background-position: 3.3% 85.3%;
   }
 }
 
@@ -76,17 +187,22 @@ html {
   display: none;
   position: fixed;
   z-index: 3;
-  background: #414142;
+  background:#EFEFF0;
   top: 0;
   left: 0;
   bottom: 0;
   width: 600px;
   @include clearfix;
-  color: #fff;
-  font-family: 'Gotham';
+  color: #333333;
+  font-family: 'DroidSerif';
 
   .mellow-logo {
-    margin-top: 50px;
+    margin-top: 40px;
+
+    .logom {
+      width: 90px;
+      height: 90px;
+    }
   }
 
   .border-bottom {
@@ -117,11 +233,11 @@ html {
   }
 
   .right-menu {
-    background: #484747;
+    background: #E6E7E8;
   }
 
   p {
-    max-width: 160px;
+    max-width: 100%;
     font-size: 11px;
     font-weight: normal;
     line-height: 19px;
@@ -133,6 +249,7 @@ html {
     left: 0;
     right: 0;
     padding: 50px;
+
   }
   .menu-padding {
     padding: 20px 50px 0;
@@ -150,7 +267,7 @@ html {
   }
 
   h4 {
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 14px;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -164,12 +281,12 @@ html {
       display: inline-block;
       width: 60px;
       height: 60px;
-      border: 1px solid #fff;
+      border: 1px solid #333333;
       float: left;
       font-size: 25px;
       text-align: center;
       line-height: 60px;
-      color: #fff;
+      color: #333333;
 
       & + a {
         border-left: 0;
@@ -181,12 +298,12 @@ html {
     display: block;
     font-size: 12px;
     a {
-      color: #fff;
+      color: #333333;;
     }
   }
 
   .index {
-    color: $mellow;
+    color:#333333;
     font-size: 11px;
     display: inline-block;
     margin-right: 4px;
@@ -201,24 +318,26 @@ html {
       display: block;
       text-align: center;
       padding: 20px 0;
-      color: #fff;
-      border-bottom: 1px solid #5c595a;
-      font-size: 13px;
+      color: #333333;
+      border-top: 1px solid #5c595a;
+      font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 11px;
+      font-weight: bold;
+      /*font-size: 11px;*/
+      font-family: 'AkzidenzGrotesk';
 
       &:hover {
-        background: #72674b;
+        background: $mellow;
         text-decoration: none;
-        color: $mellow;
+        color: #333333;
       }
     }
   }
 
   .work {
-    background: #414142;
-    border: 1px solid #5d5748;
+    background: $mellow;
+    border: 1px solid $mellow;
     padding: 3px 20px;
     display: inline-block;
     font-size: 11px;
@@ -234,19 +353,20 @@ header {
   right: 0;
   padding: 10px 58px;
   z-index: 2;
-  background: $mellow;
+  background: #E6E7E8;
+  
 
   &.colored {
-    background: none;
+    background:#e7e7e7;
     
     .button-span {
       span {
-        background: $mellow;
+        background: #333333;
       }
     }
 
     #target {
-      color: $mellow;
+      color: #333333;
     }
 
     span {
@@ -260,9 +380,9 @@ header {
     line-height: 45px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 20px;
     letter-spacing: 1.5px;
-    font-family: 'Gotham';
+    font-family: 'AkzidenzGrotesk';
   }
 
   .logo {
@@ -288,6 +408,16 @@ header {
       margin-bottom: 4px;
     }
   }
+}
+
+footer {
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+  right: 0;
+  z-index: 2;
+  font-family: 'DroidSerif';
+  font-size: 10px;
 }
 
 .static-content {
@@ -323,7 +453,7 @@ header {
         width: 15px;
         height: 15px;
         display: inline-block;
-        background-color: $mellow;
+        background-color:$mellow;
         border-radius: 50%;
         z-index: 1;
         position: relative;
@@ -361,7 +491,7 @@ section {
 #main {
   color: #fff;
   background: {
-    image: url('../images/computer.jpg');
+    image: url('../images/Assets_Site-18.png');
     size: cover;
     position: 50% 50%;
   }
@@ -506,21 +636,48 @@ section {
       transform: none;
     }
   }
+  
+  .contenedor {
+    display: flex;
+    /*align-items: flex-start;*/
+    margin:auto;
+    width: 78%;
+    margin-left: 190px;
+
+    .divservices {
+      flex:1;
+      margin:auto;
+      margin-top: 0;
+    }
+  }
 
   .service {
     text-align: center;
     border: 1px solid #D6D4D4;
-    margin-bottom: 20px;
-    padding: 20px 0;
-    border-bottom: 8px solid $mellow;
+    margin-bottom: 10px;
+    //padding: 10px;
+    //border-bottom: 8px solid $mellow;
     font-family: 'Gotham';
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+    img {
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      margin-left: -20px;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+    }
   }
 
-  .m-icon {
+  /*.m-icon {
     width: 60px;
     height: 60px;
     display: inline-block;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     background: {
       image: url('../images/sprite.png');
       repeat: no-repeat;
@@ -557,31 +714,44 @@ section {
     &.m-design {
       background-position: -180px -60px;
     }
-  }
+  }*/
 
   p {
     font-weight: bold;
     line-height: 16px;
-    letter-spacing: 3px;
-    font-size: 12px;
+    /*letter-spacing: 3px;*/
+    font-size: 16px;
+    font-family: 'AkzidenzGrotesk';
+  }
+
+  li {
+    font-family: 'DroidSerif';
+    font-size: 11px;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    padding-left: 10px;
   }
 }
 
 .main-title {
   display: inline-block;
-  border: 2px solid $mellow;
+  //border: 2px solid $mellow;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 2px;
   padding: 7px 10px;
   margin-bottom: 30px;
-  background: #fff;
-  font-family: 'Gotham';
+  //background: #fff;
+  font-family: 'AkzidenzGrotesk';
 }
 
 #our-projects {
-  background: linear-gradient(180deg, #EDECEC 65%, #fff 50%);
+  //background: linear-gradient(180deg, #EDECEC 65%, #fff 50%);
+  background:#EDECEC;
 
   .floating {
     margin-top: 65px;
@@ -631,12 +801,33 @@ section {
       }
     }
   }
+  
+  .jcarousel{
+    ul {
+      left: 50%;
+      margin-left: -155px;
+    }
+  } 
 
   .carousel-elem {
-    color: #fff;
-    background: #414142;
-    padding: 7px;
-    margin: 0 12px;
+    color: #414142;
+    background: #fff;
+    //padding: 7px;
+    margin: 0 25px;
+
+    &:hover {
+      overflow: hidden;
+
+      img {
+        transform:scale(1.7);
+        transition: all 1s ease;
+        opacity: 0.3;
+      }
+
+      .project-description {
+        position: relative;
+      }
+    }
 
     img {
       max-width: 100%;
@@ -653,12 +844,40 @@ section {
 
     p{
       font-size: 11px;
+      font-family: 'DroidSerif';
     }
   }
 
+  .control-prev, 
+  .control-next {
+    background-image: url("../images/Assets_Site-06.png");
+    height: 40px;
+    width: 40px;
+    background-size:contain; 
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+
+    &:hover {
+      background-image: url("../images/Assets_Site-07.png");
+    }
+  }
+
+  .control-prev {
+    left: 25px;
+  }
+
+  .control-next{
+    right: 25px;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+  }
+
   .project-description {
-    padding: 0 15px;
-    font-family: 'Gotham';
+    padding: 0 15px 5px 0;
+    font-family: 'AkzidenzGrotesk';
+    text-align: center;
   }
 }
 
@@ -750,21 +969,26 @@ section {
   h4 {
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: bold;
+    /*font-weight: bold;*/
     letter-spacing: 1px;
     font-size: 16px;
     margin-top: 0;
-    font-family: 'Gotham';
+    font-family: 'DroidSerif';
+
+    @media (max-width: $screen-sm) {
+      font-size: 13px;
+    }
   }
 
   h1 {
     font-size: 157px;
     font-weight: bold;
     margin: 0;
-    font-family: 'Gotham';
+    font-family: 'AkzidenzGrotesk';
 
     @media (max-width: $screen-sm) {
       font-size: 50px;
+      margin: 10px 0px;
     }
   }
 
@@ -782,7 +1006,7 @@ section {
       color: $mellow;
 
       &:hover {
-        background: $mellow;
+        background:$mellow;
         color: #fff;
       }
 
@@ -793,10 +1017,14 @@ section {
 
     @media (max-width: $screen-sm) {
       a {
-        margin: 20px 40px;
-        display: block;
+        width: 46px;
+        height: 46px;
+        margin:10px;
+        font-size: 16px;
+        display: inline-block;
+        padding: 7px;
         & + a {
-          margin: 20px 40px;
+          margin:10px;
         }
       }
     }
@@ -808,7 +1036,7 @@ section {
     bottom: 0;
     top: 65px;
     z-index: 2;
-    background: #d0ccc7;
+    background: #333333;
     transform: skewX(-13deg);
     width: 100%;
     text-align: left;

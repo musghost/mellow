@@ -31,25 +31,29 @@ var projects = [
           changeTarget('Mellow C&C');
           $('#menu').addClass('hidden');
           $('header').addClass('colored');
+           $('#made').removeClass('hidden');
           break;
+        //case 2:
+          //changeTarget('Our structure');
+          //break;
         case 2:
-          changeTarget('Our structure');
+          changeTarget('Our services');
+           $('#made').removeClass('hidden');
           break;
         case 3:
-          changeTarget('Our services');
-          break;
-        case 4:
           changeTarget('Portfolio');
           $('#menu').addClass('hidden');
+          $('#made').addClass('hidden');
           break;
-        case 5:
-          changeTarget('Our team');
-        case 5:
+        //case 5:
+          //changeTarget('Our team');
+        case 4:
           changeTarget("Let's talk");
+           $('#made').removeClass('hidden');
           break;
       }
 
-      if (index != 1 && index != 4) {
+      if (index != 1 && index != 3) {
         $('#menu').removeClass('hidden');
         $('header').removeClass('colored');
       }
@@ -73,7 +77,7 @@ var projects = [
 
     if (window.innerWidth >= 769){
       $('#fullpage').fullpage({
-        anchors: ['secmain', 'secstructure', 'secservices', 'secprojects', //'secteam', 
+        anchors: ['secmain', 'secservices', 'secprojects', //'secteam', 
         'seccontact'],
         menu: '#menu',
         scrollingSpeed: 700,
@@ -82,20 +86,6 @@ var projects = [
         },
         onLeave: function(index, nextIndex, direction) {
           $(".menu").fadeOut();
-
-          if (nextIndex == 2) {
-            if (index == 3){
-              setTimeout(function() {
-                $('#our-structure').show();
-              }, 300);
-            } else {
-              $('#our-structure').show();
-            }
-          }
-
-          if (index == 2) {
-            $('#our-structure').hide();
-          }
 
           setMessage(nextIndex);
         }
@@ -124,12 +114,12 @@ var projects = [
         wrap: 'circular'
       });
 
-    $('.jcarousel-control-prev')
+    $('.control-prev')
       .jcarouselControl({
         target: '-=1'
       });
 
-    $('.jcarousel-control-next')
+    $('.control-next')
       .jcarouselControl({
         target: '+=1'
       });
@@ -158,7 +148,7 @@ var projects = [
         return $('#main').outerHeight(true);
       },
       bottom: function() {
-        return $('#main').outerHeight(true) + $('#our-structure').outerHeight(true);
+        return $('#main').outerHeight(true) + $('#our-services').outerHeight(true);
       }
     }
   });
