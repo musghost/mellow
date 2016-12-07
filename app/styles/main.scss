@@ -155,9 +155,11 @@ $icon-font-path: '../fonts/';
 @media (min-width: 360px) and (max-width: 640px){
   #our-projects div.jcarousel .carousel-elem {
     margin: 10px;
-  }
-  p{
+
+    p{
     display: none;
+    }
+  
   }
   
 }
@@ -858,7 +860,7 @@ section {
     h3 {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 11px;
       letter-spacing: 1px;
       margin-bottom: 5px;
       margin-left: 15px;
