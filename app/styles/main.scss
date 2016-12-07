@@ -152,6 +152,16 @@ $icon-font-path: '../fonts/';
 
 }
 
+@media (min-width: 360px) and (max-width: 640px){
+  #our-projects div.jcarousel .carousel-elem {
+    margin: 10px;
+  }
+  p{
+    display: none;
+  }
+  
+}
+
 /* COLORS */
 
 $mellow: #FEDA00;
@@ -764,6 +774,7 @@ section {
 
   .floating {
     margin-top: 65px;
+
   }
 
   .main-title {
@@ -811,7 +822,7 @@ section {
     }
   }
   
-  .jcarousel{
+  .jcarousel { 
     ul {
       left: 50%;
       margin-left: -155px;
@@ -835,6 +846,7 @@ section {
 
       .project-description {
         position: relative;
+        text-align: center;
       }
     }
 
@@ -846,15 +858,18 @@ section {
     h3 {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 13px;
+      font-size: 15px;
       letter-spacing: 1px;
       margin-bottom: 5px;
+      margin-left: 15px;
     }
 
     p{
       font-size: 11px;
       font-family: 'DroidSerif';
     }
+
+
   }
 
   .control-prev, 
