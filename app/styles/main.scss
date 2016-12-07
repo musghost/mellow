@@ -648,6 +648,15 @@ section {
       flex:1;
       margin:auto;
       margin-top: 0;
+
+      @media (max-width: $screen-sm-max){
+        p{
+          margin-top: 15px;
+        }
+        span{
+          display: none;
+        }
+      }
     }
   }
 
