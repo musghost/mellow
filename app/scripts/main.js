@@ -28,7 +28,7 @@ var projects = [
     var setMessage = function(index) {
       switch(index) {
         case 1:
-          changeTarget('Mellow C&C');
+          changeTarget('Mellow Consulting');
           $('#menu').addClass('hidden');
           $('header').addClass('colored');
            $('#made').removeClass('hidden');
