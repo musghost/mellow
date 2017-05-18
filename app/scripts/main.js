@@ -22,8 +22,24 @@ var projects = [
   }
 ];
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 (function($) {
   $(function() {
+
+    if(getParameterByName('jobs') === 'true') {
+      $('#curtain, #jobs').addClass('show');
+      $('#fullpage').css('opacity', 0);
+      $('body').css('overflow', 'hidden');
+    }
 
     var setMessage = function(index) {
       switch(index) {
@@ -164,15 +180,17 @@ var projects = [
     });
   });
 
-  $('.apply').each(function(i, apply) {
+  /*$('.apply').each(function(i, apply) {
     $(apply).click(function(e) {
       descriptions.removeClass('show');
       applications.addClass('show');
     });
-  });
+  });*/
 
   $('.close-jobs').click(function(){
     $('#curtain, #jobs').removeClass('show');
+    $('#fullpage').css('opacity', 1);
+    $('body').css('overflow', 'inherit');
   });
 
   $('.work').click(function(){
